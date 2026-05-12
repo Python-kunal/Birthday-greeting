@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260511-2" />
+    <link rel="stylesheet" href="birthday-lab.css?v=20260511-3" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="scene-wrap" aria-hidden="true">
+      <canvas id="birthday-scene"></canvas>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Birthday greeting home">
+        <span class="brand-mark"></span>
+        <span>Birthday Night</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#moments">Photos</a>
+        <a href="#message">Birthday Lab</a>
+        <a href="#surprise">Surprise</a>
+      </nav>
+      <button class="icon-button" id="sound-toggle" type="button" aria-label="Toggle ambient music">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+          <path d="M16 9.5a4 4 0 0 1 0 5"></path>
+          <path d="M19 7a8 8 0 0 1 0 10"></path>
+        </svg>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Birthday Mode: On</p>
+          <h1>Happy Birthday, Vidhi.</h1>
+          <p class="hero-text">
+            Aaj ka din tumhare naam. No countdown, no waiting, just a full
+            celebration for the person who makes normal days feel memorable.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#surprise">Start The Moment</a>
+            <a class="secondary-action" href="#moments">View Memories</a>
+          </div>
+        </div>
+
+        <aside class="hero-portrait" aria-label="Vidhi birthday portrait">
+          <div class="portrait-halo" aria-hidden="true"></div>
+          <div class="poster-backplate" aria-hidden="true">
+            <img src="assets/photos/IMG-20260511-WA0002.jpg" alt="" />
+          </div>
+          <div class="portrait-frame">
+            <img src="assets/photos/IMG-20260511-WA0002.jpg" alt="Vidhi birthday portrait" />
+            <div class="portrait-fallback">
+              <span>Vidhi</span>
+            </div>
+            <div class="portrait-date">13 May</div>
+            <div class="portrait-shine"></div>
+          </div>
+          <div class="portrait-caption">
+            <span class="pass-label">Birthday Queen</span>
+            <strong>Vidhi</strong>
+            <p>Some photos do not need a filter. They already look like a blessing.</p>
+          </div>
+          <div class="portrait-ribbon" aria-hidden="true">VIDHI DAY</div>
+          <div class="floating-note note-top">Main character frame</div>
+          <div class="floating-note note-bottom">Dil khush moment</div>
+        </aside>
+      </section>
+
+      <section class="mini-strip" aria-label="Birthday highlights">
+        <div>
+          <strong>3D Cake</strong>
+          <span>Live candles and motion</span>
+        </div>
+        <div>
+          <strong>Memory Frames</strong>
+          <span>Your photos in spotlight</span>
+        </div>
+        <div>
+          <strong>Final Reveal</strong>
+          <span>Tap for confetti blast</span>
+        </div>
+      </section>
+
+      <section class="section moments" id="moments">
+        <div class="section-heading">
+          <p class="eyebrow">Memory Premiere</p>
+          <h2>Photos, but make them feel like a movie.</h2>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card">
+            <img src="assets/photos/Snapchat-1425624381.jpg" alt="Friend memory one" />
+            <div>
+              <span>Scene 01</span>
+              <strong>Temple glow, royal mode</strong>
+            </div>
+          </article>
+          <article class="photo-card featured">
+            <img src="assets/photos/IMG-20260511-WA0004.jpg" alt="Friend memory two" />
+            <div>
+              <span>Scene 02</span>
+              <strong>Twirl caught in cinema mode</strong>
+            </div>
+          </article>
+          <article class="photo-card">
+            <img src="assets/photos/IMG-20260511-WA0009.jpg" alt="Friend memory three" />
+            <div>
+              <span>Scene 03</span>
+              <strong>Sunshine entered the chat</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section birthday-lab" id="message">
+        <div class="message-copy">
+          <p class="eyebrow">Birthday Lab</p>
+          <h2>Wish machine has entered the chat.</h2>
+          <p>
+            Cake approved. Photos iconic. Today Vidhi gets premium treatment,
+            zero boring wishes, and one perfectly dramatic birthday moment.
+          </p>
+        </div>
+        <div class="party-machine" aria-label="Funny 3D birthday elements">
+          <div class="wish-machine">
+            <div class="wish-aura" aria-hidden="true"></div>
+            <div class="wish-photo">
+              <img src="assets/photos/IMG-20260511-WA0009.jpg" alt="Vidhi smiling" />
+              <span>Birthday Star</span>
+            </div>
+            <div class="wish-core" aria-hidden="true">
+              <span class="core-ring"></span>
+              <span class="core-cake cake-bottom"></span>
+              <span class="core-cake cake-middle"></span>
+              <span class="core-cake cake-topper"></span>
+              <span class="core-flame flame-a"></span>
+              <span class="core-flame flame-b"></span>
+              <span class="core-flame flame-c"></span>
+            </div>
+            <div class="wish-ticket">
+              <span>Wish Output</span>
+              <strong>Happiness unlocked</strong>
+              <p>Valid for laughs, cake, compliments, and zero homework energy.</p>
+            </div>
+            <div class="status-board">
+              <div><span>Smile level</span><strong>100%</strong></div>
+              <div><span>Photo score</span><strong>Iconic</strong></div>
+              <div><span>Cake claim</span><strong>Approved</strong></div>
+            </div>
+            <span class="lab-chip chip-one">Drama muted</span>
+            <span class="lab-chip chip-two">Glow upgraded</span>
+            <span class="lab-chip chip-three">Party mode ON</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="surprise" id="surprise">
+        <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+        <div class="birthday-buddy" id="birthday-buddy" aria-hidden="true">
+          <div class="buddy-speech">Happy Birthday, Vidhi!</div>
+          <div class="buddy-head">
+            <span class="buddy-eye eye-left"></span>
+            <span class="buddy-eye eye-right"></span>
+            <span class="buddy-nose"></span>
+            <span class="buddy-smile"></span>
+            <span class="buddy-bell"></span>
+          </div>
+          <div class="buddy-body">
+            <span class="buddy-pocket"></span>
+          </div>
+        </div>
+        <div class="surprise-inner">
+          <p class="eyebrow">Final Reveal</p>
+          <h2 id="surprise-title">One tap, full birthday blast.</h2>
+          <button class="primary-action" id="reveal-button" type="button">Launch Wish</button>
+          <p class="reveal-text" id="reveal-text">
+            Happy Birthday, legend. May this year be softer where you need peace,
+            louder where you deserve celebration, and powerful where your dreams
+            are waiting.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <audio id="ambient-audio" loop preload="auto" autoplay>
+      <source src="assets/audio/WhatsApp Audio 2026-05-12 at 21.12.27.mpeg" type="audio/mpeg" />
+    </audio>
+
+    <script type="module" src="main.js?v=20260512-3"></script>
+  </body>
+</html>
