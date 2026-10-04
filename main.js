@@ -413,7 +413,7 @@ const birthdayBuddy = document.querySelector("#birthday-buddy");
 revealButton.addEventListener("click", () => {
   surpriseInner.classList.add("is-revealed");
   birthdayBuddy?.classList.add("is-visible");
-  surpriseTitle.textContent = "Happy Birthday, Vidhi";
+  surpriseTitle.textContent = "Happy Birthday, Tusharika";
   revealButton.textContent = "Wish Revealed";
   launchConfetti();
   startAudio();

@@ -1130,10 +1130,11 @@ h2 {
 .surprise-inner {
   position: relative;
   z-index: 2;
-  width: min(900px, 100%);
+  width: min(980px, 100%);
+  max-height: min(88svh, 920px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: clamp(28px, 6vw, 72px);
+  padding: clamp(26px, 5vw, 64px);
   background: var(--glass-strong);
   text-align: center;
   box-shadow: var(--shadow);
@@ -1147,18 +1148,37 @@ h2 {
 
 .reveal-text {
   max-height: 0;
+  max-width: 790px;
   margin: 0 auto;
   overflow: hidden;
   color: var(--muted);
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
-  line-height: 1.7;
+  font-size: clamp(0.98rem, 1.45vw, 1.18rem);
+  line-height: 1.85;
   opacity: 0;
+  text-align: left;
   transition: max-height 0.7s ease, opacity 0.7s ease, margin 0.7s ease;
 }
 
+.reveal-text p {
+  margin: 0 0 1.15rem;
+}
+
+.reveal-text p:first-child,
+.reveal-text p:last-child {
+  color: var(--ink);
+  font-weight: 800;
+  text-align: center;
+}
+
+.reveal-text p:last-child {
+  margin-bottom: 0;
+}
+
 .surprise-inner.is-revealed .reveal-text {
-  max-height: 180px;
-  margin-top: 24px;
+  max-height: min(48svh, 520px);
+  margin-top: 28px;
+  overflow-y: auto;
+  padding-right: 8px;
   opacity: 1;
 }
 
